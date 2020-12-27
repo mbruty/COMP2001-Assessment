@@ -24,6 +24,21 @@
       <p>This project aims to display air quality data from the area surrounding Plymouth, England in both Human and machiene readable ways.</p>
       <p>This data is provided by <a href="https://plymouth.thedata.place/dataset/air-quality-data">Open Data Plymouth.</a></p>
       <h2>The Data</h2>
+      <p>Get data in GEOJSON format</p>
+      <code><?php
+            // echo url
+            // will remove the need to update this if it's hosted under different url's
+            $port = $_SERVER["SERVER_PORT"];
+
+            // correct http/s in url depending if it's on a ssl port
+            echo $port == "443" ? "https://" : "http://";
+
+            echo $_SERVER["SERVER_NAME"];
+
+            // If application isn't running on a default http/s port, also echo the port number
+            if ($port != "80" && $port != "443") echo ":" . $port;
+
+            ?>/airquality</code>
       <table class="responsive-table">
         <thead>
           <tr>
@@ -36,7 +51,7 @@
           <tr>
             <td>PM2.5</td>
             <td>Number</td>
-            <td>The number of particulate material smaller than 2.5 Micrometers</td>
+            <td>The number of particulate material smaller than 2.5 Micrometers per m<sup>3</sup></td>
           </tr>
           <tr>
             <td>Longitude</td>
