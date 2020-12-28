@@ -29,6 +29,16 @@ main .app {
   background-color: #ececec;
   max-width: 80ch;
   padding: 25px;
+  padding-top: 0;
+}
+
+main .app #table {
+  height: calc(100vh - 64px);
+  overflow: scroll;
+}
+
+main .app table {
+  background-color: white;
 }
 
 main .app h1 {
@@ -37,6 +47,10 @@ main .app h1 {
 
 main .app h2 {
   font-size: 2em;
+}
+
+main .app h3 {
+  font-size: 1.6em;
 }
 
 main .app code {
