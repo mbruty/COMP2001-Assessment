@@ -39,4 +39,12 @@ class AirQualityView extends AirQualityModel{
 
         echo "</tbody></table>";
     }
+
+    public function showMarkers() {
+        $data = $this->getData();
+        array_shift($data);
+        foreach ($data as $row) {
+            echo "[" . $row->lat . "," . $row->lon . "," . $row->pm2_5 . "," . "\"" . $row->name . "\"" . "],";
+        }
+    }
 }
