@@ -1,4 +1,4 @@
-<footer class="page-footer blue lighten-1">
+<footer class="page-footer blue darken-4">
     <div class="footer-copyright">
         <div class="container">
             © 2020 Michael Bruty
