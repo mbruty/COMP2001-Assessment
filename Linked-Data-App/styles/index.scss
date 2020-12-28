@@ -1,52 +1,69 @@
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  background-color: #dddddd;
+
+  .app {
     display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+    flex-flow: column nowrap;
+    margin: auto;
+    padding-bottom: auto;
+    background-color: #ececec;
+    max-width: 80ch;
+    padding: 25px;
+    padding-top: 0;
 
-  main {
-    flex: 1 0 auto;
-    background-color: #dddddd;
+    #table {
+      height: calc(100vh - 64px);
+      overflow: scroll;
+    }
+    table {
+      background-color: white;
+    }
 
-    .app{
-      display: flex;
-      flex-flow: column nowrap;
-      margin: auto;
-      padding-bottom: auto;
-      background-color: #ececec;
-      max-width: 80ch;
-      padding: 25px;
-      padding-top: 0;
+    h1 {
+      font-size: 2.5em;
+    }
 
-      #table{
-        height: calc(100vh - 64px);
-        overflow: scroll;
-      }
-      table{
-        background-color: white;
-      }
+    h2 {
+      font-size: 2em;
+    }
 
-      h1{
-        font-size: 2.5em;
-      }
-
-      h2{
-        font-size: 2em;
-      }
-
-      h3{
-        font-size: 1.6em;
-      }
-      code {
-        background-color: #dadada;
-        padding: 5px;
-        border-radius: 4px;
-      }
-      .view-btn {
-        width: 150px;
-        float: right;
-        margin-left: auto;
-        margin-top: 25px;
-      }
+    h3 {
+      font-size: 1.6em;
+    }
+    code {
+      background-color: #dadada;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .view-btn {
+      width: 150px;
+      float: right;
+      margin-left: auto;
+      margin-top: 25px;
+    }
+    svg{
+      cursor: pointer;
     }
   }
+}
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  color: #0d47a1 !important;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+  background-color: #0d48a11a !important; 
+}
+.tabs .tab a{
+  color: #6e9de4 !important;
+}
+.tabs .indicator{
+
+  background-color: #0d47a1 !important;
+}

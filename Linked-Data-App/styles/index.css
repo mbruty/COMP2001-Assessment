@@ -65,4 +65,25 @@ main .app .view-btn {
   margin-left: auto;
   margin-top: 25px;
 }
+
+main .app svg {
+  cursor: pointer;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  color: #0d47a1 !important;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background-color: #0d48a11a !important;
+}
+
+.tabs .tab a {
+  color: #6e9de4 !important;
+}
+
+.tabs .indicator {
+  background-color: #0d47a1 !important;
+}
 /*# sourceMappingURL=index.css.map */
