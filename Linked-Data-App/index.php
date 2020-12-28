@@ -22,23 +22,8 @@
     <div class="app">
       <h1>Welcome</h1>
       <p>This project aims to display air quality data from the area surrounding Plymouth, England in both Human and machiene readable ways.</p>
-      <p>This data is provided by <a href="https://plymouth.thedata.place/dataset/air-quality-data">Open Data Plymouth.</a></p>
+      <p>View the original dataset provided by <a href="https://plymouth.thedata.place/dataset/air-quality-data">Open Data Plymouth.</a></p>
       <h2>The Data</h2>
-      <p>Get data in GEOJSON format</p>
-      <code><?php
-            // echo url
-            // will remove the need to update this if it's hosted under different url's
-            $port = $_SERVER["SERVER_PORT"];
-
-            // correct http/s in url depending if it's on a ssl port
-            echo $port == "443" ? "https://" : "http://";
-
-            echo $_SERVER["SERVER_NAME"];
-
-            // If application isn't running on a default http/s port, also echo the port number
-            if ($port != "80" && $port != "443") echo ":" . $port;
-
-            ?>/airquality</code>
       <table class="responsive-table">
         <thead>
           <tr>
@@ -73,6 +58,21 @@
       <a class="btn waves-effect view-btn waves-light" href="data.php">View Data
         <i class="material-icons right">keyboard_arrow_right</i>
       </a>
+      <p>Get data in GEOJSON format</p>
+      <code>[HTTP GET] <?php
+            // echo url
+            // will remove the need to update this if it's hosted under different url's
+            $port = $_SERVER["SERVER_PORT"];
+
+            // correct http/s in url depending if it's on a ssl port
+            echo $port == "443" ? "https://" : "http://";
+
+            echo $_SERVER["SERVER_NAME"];
+
+            // If application isn't running on a default http/s port, also echo the port number
+            if ($port != "80" && $port != "443") echo ":" . $port;
+
+            ?>/airquality</code>
     </div>
   </main>
   <?php include "includes/footer.inc.php" ?>
