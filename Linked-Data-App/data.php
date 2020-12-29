@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <?php include "includes/materialize.inc.php"; ?>
     <?php include "includes/mapbox.inc.php"; ?>
-    <?php include "includes/jquery.inc.php"; ?>
     <link rel="stylesheet" href="css/index.css">
 
 </head>
@@ -22,6 +21,7 @@
     <?php include "includes/nav.inc.php"; ?>
     <main>
         <div class="app">
+            <?php include "includes/autocomplete.inc.php"; ?>
             <div class="col s12">
                 <ul class="tabs">
                     <li class="tab col s3"><a href="#table" class="active">Table</a></li>
@@ -35,7 +35,7 @@
                 ?>
             </div>
             <div id="map" class="col s12">
-                <div id='map' style='width: 400px; height: 600px;'></div>
+                <div id='map' class="map"></div>
             </div>
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoibWJydXR5MSIsImEiOiJja2o3cGVhZ3kwcG1tMnBydTF2cnJpNjJ1In0.K1w4Xw2C5Y_pYSqWC0kALw';
@@ -76,7 +76,7 @@
                         color: point[4],
                         draggable: false
                     }).setLngLat([point[1], point[0]])
-                    .setPopup(new mapboxgl.Popup().setHTML(`<h3 class="center-align">${point[3]}</h3><p class="center-align">PM2.5: ${point[2]}m<sup>-3</sup></p>`))
+                    .setPopup(new mapboxgl.Popup().setHTML(`<h3 class="center-align">${point[3]}</h3><p class="center-align">Particulates: ${point[2]} PM2.5m<sup>-3</sup></p>`))
                     .addTo(map));
             </script>
         </div>
