@@ -58,7 +58,7 @@
       <a class="btn waves-effect view-btn waves-light" href="data.php">View Data
         <i class="material-icons right">keyboard_arrow_right</i>
       </a>
-      <p>Get data in GEOJSON format</p>
+      <p>Get data in JSON-LD format</p>
       <code>[HTTP GET] <?php
             // echo url
             // will remove the need to update this if it's hosted under different url's
