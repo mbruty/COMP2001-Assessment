@@ -1,7 +1,34 @@
 <?php
-require_once "classes/AirQualityModel.class.php";
-class AirQualityView extends AirQualityModel{
-    public function showTable() {
+
+use function PHPSTORM_META\map;
+
+require_once "AirQualityModel.class.php";
+class AirQualityView extends AirQualityModel
+{
+
+    public function showArray()
+    {
+        $data = $this->getData();
+        $array = array();
+        array_shift($data);
+        foreach ($data as $row) {
+            array_push($array, (object)array(
+                "@type" => "Place",
+                "geo" => array(
+                    "@type" => "GeoCoordinates",
+                    "latitude" => $row->lat,
+                    "longitude" => $row->lon,
+                ),
+                "name" => $row->name,
+                "aq:pm2_5" => $row->pm2_5,
+                "aq:place_type" => $row->type
+            ));
+        }
+        return $array;
+    }
+
+    public function showTable()
+    {
         $data = $this->getData();
         // First row contains the headdings
         echo "
@@ -46,7 +73,8 @@ class AirQualityView extends AirQualityModel{
         echo "</tbody></table>";
     }
 
-    public function showMarkers() {
+    public function showMarkers()
+    {
         $data = $this->getData();
         array_shift($data);
         foreach ($data as $row) {
@@ -54,7 +82,8 @@ class AirQualityView extends AirQualityModel{
         }
     }
 
-    public function showPlace($name) {
+    public function showPlace($name)
+    {
         $data = $this->getPlace($name);
         echo "
         <table>
@@ -81,6 +110,6 @@ class AirQualityView extends AirQualityModel{
                 </tr>
             </tbody>
         </table>";
-            echo "<script>var data = [" . $data->lat . "," . $data->lon . "," . $data->pm2_5 . "," . "\"" . $data->name . "\"" . "]; </script>";
-    } 
+        echo "<script>var data = [" . $data->lat . "," . $data->lon . "," . $data->pm2_5 . "," . "\"" . $data->name . "\"" . "]; </script>";
+    }
 }
