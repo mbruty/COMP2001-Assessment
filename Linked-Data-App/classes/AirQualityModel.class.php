@@ -1,5 +1,5 @@
 <?php
-require_once "classes/Location.class.php";
+require_once "Location.class.php";
 class AirQualityModel {
 
     protected function getData() {
