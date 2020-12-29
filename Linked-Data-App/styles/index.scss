@@ -4,6 +4,11 @@ body {
   flex-direction: column;
 }
 
+.input-field {
+  width: 100%;
+  margin-top: calc(1rem + 25px) !important;
+}
+
 main {
   flex: 1 0 auto;
   background-color: #dddddd;
@@ -19,13 +24,20 @@ main {
     padding-top: 0;
 
     #table {
-      height: calc(100vh - 64px);
+      height: calc(100vh - 325px);
       overflow: scroll;
     }
-    table {
+    .map{
+      height: calc(100vh - 325px);
+    }
+    .sticky-th{
+      position: sticky;
+      top: 0;
       background-color: white;
     }
-
+    .white {
+      background-color: white;
+    }
     h1 {
       font-size: 2.5em;
     }
@@ -48,7 +60,7 @@ main {
       margin-left: auto;
       margin-top: 25px;
     }
-    svg{
+    svg {
       cursor: pointer;
     }
   }
@@ -57,13 +69,13 @@ main {
 .tabs .tab a.active {
   color: #0d47a1 !important;
 }
-.tabs .tab a:focus, .tabs .tab a:focus.active{
-  background-color: #0d48a11a !important; 
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: #0d48a11a !important;
 }
-.tabs .tab a{
+.tabs .tab a {
   color: #6e9de4 !important;
 }
-.tabs .indicator{
-
+.tabs .indicator {
   background-color: #0d47a1 !important;
 }
