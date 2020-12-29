@@ -11,4 +11,14 @@ class AirQualityModel {
         }
         return $array;
     }
+
+    protected function getPlace($name) {
+        $data = $this->getData();
+        array_shift($data);
+        foreach($data as $row) {
+            if($row->name === $name) {
+                return $row;
+            }
+        }
+    }
 }
