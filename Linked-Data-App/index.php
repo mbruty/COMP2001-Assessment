@@ -1,3 +1,4 @@
+<?php require "includes/server_details.inc.php"; ?>
 <!doctype html>
 
 <html lang="en">
@@ -59,20 +60,7 @@
         <i class="material-icons right">keyboard_arrow_right</i>
       </a>
       <p>Get data in JSON-LD format</p>
-      <code>[HTTP GET] <?php
-            // echo url
-            // will remove the need to update this if it's hosted under different url's
-            $port = $_SERVER["SERVER_PORT"];
-
-            // correct http/s in url depending if it's on a ssl port
-            echo $port == "443" ? "https://" : "http://";
-
-            echo $_SERVER["SERVER_NAME"];
-
-            // If application isn't running on a default http/s port, also echo the port number
-            if ($port != "80" && $port != "443") echo ":" . $port;
-
-            ?>/airquality</code>
+      <code>[HTTP GET] <a href="airquality"><?php echo getDetails(); ?>/airquality</a></code>
     </div>
   </main>
   <?php include "includes/footer.inc.php" ?>
