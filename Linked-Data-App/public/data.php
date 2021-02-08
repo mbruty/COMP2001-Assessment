@@ -70,7 +70,6 @@
                 data.forEach(item => {
                     item.push(pickHex(item[2]));
                 });
-                console.table(data);
                 // Set options
                 data.forEach(point => new mapboxgl.Marker({
                         color: point[4],
