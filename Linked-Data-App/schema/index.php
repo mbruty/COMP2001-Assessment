@@ -40,8 +40,8 @@
                         <td>The object containing the longitude and latitude of the place</td>
                     </tr>
                     <tr>
-                        <td><a href="/schema/aq">aq</a></td>
-                        <td><a href="/schema/aq">Air Quality</a></td>
+                        <td><a href="./schema/aq">aq</a></td>
+                        <td><a href="./schema/aq">Air Quality</a></td>
                         <td>The object containing the Air Quality data</td>
                     </tr>
                 </tbody>

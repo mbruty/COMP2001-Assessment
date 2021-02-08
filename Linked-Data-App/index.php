@@ -60,7 +60,7 @@
         <i class="material-icons right">keyboard_arrow_right</i>
       </a>
       <p>Get data in JSON-LD format</p>
-      <code>[HTTP GET] <a href="airquality"><?php echo getDetails(); ?>/airquality</a></code>
+      <code>[HTTP GET] <a href="airquality"><?php echo getDetails(); ?>airquality</a></code>
     </div>
   </main>
   <?php include "includes/footer.inc.php" ?>
