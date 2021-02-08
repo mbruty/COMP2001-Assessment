@@ -1,4 +1,4 @@
-<?php require_once "classes/AirQualityView.class.php"; ?>
+<?php require_once "../src/classes/AirQualityView.class.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South West Air Quality</title>
-    <?php include "includes/materialize.inc.php";
-    include "includes/mapbox.inc.php";
+    <?php include "../src/includes/materialize.inc.php";
+    include "../src/includes/mapbox.inc.php";
     ?>
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
-<?php include "includes/nav.inc.php"; ?>
+<?php include "../src/includes/nav.inc.php"; ?>
 
 <body>
     <main>
@@ -45,6 +45,6 @@
         </div>
     </main>
 </body>
-<?php include "includes/footer.inc.php"; ?>
+<?php include "../src/includes/footer.inc.php"; ?>
 
 </html>

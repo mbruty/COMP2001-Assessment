@@ -1,4 +1,4 @@
-<?php require_once "classes/AirQualityView.class.php"; ?>
+<?php require_once "../src/classes/AirQualityView.class.php"; ?>
 <!doctype html>
 
 <html lang="en">
@@ -6,22 +6,22 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Michael Bruty</title>
+    <title>South West Air Quality</title>
     <meta name="description" content="Linked Data App">
     <meta name="author" content="Michael Bruty">
     <link rel="stylesheet" href="styles/index.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <?php include "includes/materialize.inc.php"; ?>
-    <?php include "includes/mapbox.inc.php"; ?>
+    <?php include "../src/includes/materialize.inc.php"; ?>
+    <?php include "../src/includes/mapbox.inc.php"; ?>
     <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
-    <?php include "includes/nav.inc.php"; ?>
+    <?php include "../src/includes/nav.inc.php"; ?>
     <main>
         <div class="app">
-            <?php include "includes/autocomplete.inc.php"; ?>
+            <?php include "../src/includes/autocomplete.inc.php"; ?>
             <div class="col s12">
                 <ul class="tabs">
                     <li class="tab col s3"><a href="#table" class="active">Table</a></li>
@@ -81,7 +81,7 @@
             </script>
         </div>
     </main>
-    <?php include "includes/footer.inc.php"; ?>
+    <?php include "../src/includes/footer.inc.php"; ?>
     <script>
         var instance = M.Tabs.init(document.querySelector('.tabs'));
     </script>

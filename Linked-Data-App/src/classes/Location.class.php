@@ -15,6 +15,6 @@ class Location {
         $this->type = $arr[4];
         $this->pm2_5 = $arr[5];
         $this->lat = $arr[7];
-        $this->lon = $arr[8];
+        $this->lon = str_replace("\r", "", $arr[8]);
     }
 }

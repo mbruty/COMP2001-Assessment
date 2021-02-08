@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include "../../../includes/materialize.inc.php"; ?>
+    <?php include "../../../../src/includes/materialize.inc.php"; ?>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../styles/index.css">
     <title>Southwest Air Quality</title>
@@ -25,7 +25,7 @@
         <div class="col s12">
             <a href="/schema" class="breadcrumb">Schema</a>
             <a href="/schema/aq" class="breadcrumb">aq</a>
-            <a href="/schema" class="breadcrumb">pm2_5</a>
+            <a href="/schema" class="breadcrumb">place_type</a>
         </div>
     </div>
 </nav>
@@ -33,12 +33,12 @@
 <body>
     <main>
         <div class="app">
-            <h2>pm2_5</h2>
-            <p>Type: <a target="_blank" href="https://schema.org/Float">Float</a></p>
-            <p>Description: The number of particulate material smaller than 2.5 Micrometers per m<sup>3</sup></p>
+            <h2>place_type</h2>
+            <p>Type: <a target="_blank" href="https://schema.org/Text">Text</a></p>
+            <p>The type of place where the data was collected. Can be either GP Practice or Hospital</p>
         </div>
     </main>
 </body>
-<?php include "../../../includes/footer.inc.php" ?>
+<?php include "../../../../src/includes/footer.inc.php" ?>
 
 </html>

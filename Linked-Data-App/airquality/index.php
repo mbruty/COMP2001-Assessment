@@ -1,6 +1,6 @@
 <?php
-require "../includes/server_details.inc.php";
-require "../classes/AirQualityView.class.php";
+require "../src/includes/server_details.inc.php";
+require "../src/classes/AirQualityView.class.php";
 $requestType = $_SERVER['REQUEST_METHOD'];
 $AQView = new AirQualityView();
 if ($requestType == "GET") {
