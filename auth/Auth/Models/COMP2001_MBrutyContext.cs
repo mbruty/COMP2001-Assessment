@@ -71,7 +71,7 @@ namespace Auth.Models
         // I have to alter the spec and return the string rather than using out
         public async Task<string> Register(User user)
         {
-            var param = new SqlParameter { ParameterName = "@response", Direction = System.Data.ParameterDirection.Output, Size = 10000 };
+            var param = new SqlParameter { ParameterName = "@response", Direction = System.Data.ParameterDirection.Output };
             await Database.ExecuteSqlRawAsync("EXECUTE Register @first_name, @last_name, @password, @email, @response OUTPUT",
                 new SqlParameter("@first_name", user.FirstName),
                 new SqlParameter("@last_name", user.LastName),
