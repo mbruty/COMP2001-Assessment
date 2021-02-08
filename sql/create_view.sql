@@ -1,0 +1,1 @@
+CREATE VIEW dbo.SessionCount AS SELECT dbo.Sessions.user_id, COUNT(*) AS login_count FROM dbo.Sessions GROUP BY dbo.Sessions.user_id;
