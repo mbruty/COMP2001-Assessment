@@ -85,31 +85,36 @@ class AirQualityView extends AirQualityModel
     public function showPlace($name)
     {
         $data = $this->getPlace($name);
-        echo "
-        <table>
-            <thead>
-                <th>Attribute</th>
-                <th>Value</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Name</td>
-                    <td>{$data->name}</td>
-                </tr>
-                <tr>
-                    <td>PM2.5</td>
-                    <td>{$data->pm2_5}</td>
-                </tr>
-                <tr>
-                    <td>Latitude</td>
-                    <td>{$data->lat}</td>
-                </tr>
-                <tr>
-                    <td>Longitude</td>
-                    <td>{$data->lon}</td>
-                </tr>
-            </tbody>
-        </table>";
-        echo "<script>var data = [" . $data->lat . "," . $data->lon . "," . $data->pm2_5 . "," . "\"" . $data->name . "\"" . "]; </script>";
+        if($data != null) {
+            echo "
+            <table>
+                <thead>
+                    <th>Attribute</th>
+                    <th>Value</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>{$data->name}</td>
+                    </tr>
+                    <tr>
+                        <td>PM2.5</td>
+                        <td>{$data->pm2_5}</td>
+                    </tr>
+                    <tr>
+                        <td>Latitude</td>
+                        <td>{$data->lat}</td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>{$data->lon}</td>
+                    </tr>
+                </tbody>
+            </table>";
+            echo "<script>var data = [" . $data->lat . "," . $data->lon . "," . $data->pm2_5 . "," . "\"" . $data->name . "\"" . "]; </script>";
+        } else {
+            echo "<h1>Location not found</h1>";
+        }
+        
     }
 }

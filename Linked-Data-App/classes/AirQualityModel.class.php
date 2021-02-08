@@ -20,5 +20,7 @@ class AirQualityModel {
                 return $row;
             }
         }
+        // Not found
+        return null;
     }
 }
