@@ -7,7 +7,7 @@ if ($requestType == "GET") {
     $context = (object)array(
         "@context" => array(
             "Place" => "https://schema.org/Place",
-            "aq" => getDetails() . "schema/aq/"
+            "aq" => getDetails() . "public/schema/aq/"
         ),
         "Place" => $AQView->showArray()
     );

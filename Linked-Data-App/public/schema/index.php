@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "../../src/includes/materialize.inc.php"; ?>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="../styles/index.css">
     <title>Southwest Air Quality</title>
 </head>
-<?php include "../../src/includes/nav.inc.php"; ?>
+<nav>
+  <link rel="stylesheet" href="styles/nav.css" />
+  <div class="nav-wrapper blue darken-4">
+    <a href="../index.php" class="brand-logo" style="margin-left: 15px;">Southwest&nbsp;Air&nbsp;Quality</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="../schema">Schema</a></li>
+      <li><a href="../index.php">Home</a></li>
+      <li><a href="../data.php">Data</a></li>
+    </ul>
+  </div>
+</nav>
 <nav>
     <div class="nav-wrapper blue darken-3">
         <div class="col s12">
@@ -40,8 +50,8 @@
                         <td>The object containing the longitude and latitude of the place</td>
                     </tr>
                     <tr>
-                        <td><a href="./schema/aq">aq</a></td>
-                        <td><a href="./schema/aq">Air Quality</a></td>
+                        <td><a href="./aq">aq</a></td>
+                        <td><a href="./aq">Air Quality</a></td>
                         <td>The object containing the Air Quality data</td>
                     </tr>
                 </tbody>
